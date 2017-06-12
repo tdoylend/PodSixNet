@@ -7,7 +7,7 @@ from Channel import Channel
 class Server(asyncore.dispatcher):
 	channelClass = Channel
 	
-	def __init__(self, channelClass=None, localaddr=("127.0.0.1", 31425), listeners=5):
+	def __init__(self, localaddr=("127.0.0.1", 31425), channelClass=None,listeners=5):
 		if channelClass:
 			self.channelClass = channelClass
 		self._map = {}
